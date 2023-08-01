@@ -1,0 +1,75 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #F5F1EB;
+    color: #333;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    background-color: #D2A48C;
+    padding: 20px;
+  }
+  
+  h1 {
+    color: #fff;
+    margin: 0;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav ul li {
+    display: inline-block;
+    margin-right: 10px;
+  }
+  
+  nav ul li a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  main {
+    margin: 20px;
+  }
+  
+  /* Additional styling specific to each topic can be added below */
+  /* CSS styles for the website */
+
+.game-container {
+  text-align: center;
+  margin-top: 50px;
+  width: 400px;
+  height: 400px;
+  background-color: #fff;
+  border: 2px solid #000;
+  position: relative;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.cat-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: transform 0.5s ease-in-out;
+}
+
+#cat {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+button {
+  margin-top: 20px;
+}
+
+#score {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 20px;
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cat Lovers Website</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Welcome to Cat Lovers!</h1>
+    <nav>
+      <ul id="menu" class="closed">
+        <li><a href="#" onclick="loadPage('breeds')">Cat Breeds</a></li>
+        <li><a href="#" onclick="loadPage('care')">Cat Care and Health</a></li>
+        <li><a href="#" onclick="loadPage('adoption')">Adoption and Rescue</a></li>
+        <li><a href="#" onclick="loadPage('behavior')">Behaviour and Training</a></li>
+        <li><a href="#" onclick="loadPage('products')">Cat Products and Reviews</a></li>
+        <li><a href="#" onclick="loadPage('fun')">Fun and Entertainment</a></li>
+        <li><a href="#" onclick="loadPage('community')">Community and Forums</a></li>
+        <li><a href="#" onclick="loadPage('resources')">Cat-related Resources</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main id="main-content">
+    <div class="game-container">
+      <h2>Mini Cat Game</h2>
+      <div class="cat-container">
+        <img src="images/cat.png" alt="Cat" id="cat">
+      </div>
+      <button onclick="startGame()">Start Game</button>
+      <p id="timer">Time: 60</p>
+      <p id="score">Score: 0</p>
+    </div>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
