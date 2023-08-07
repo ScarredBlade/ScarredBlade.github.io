@@ -53,6 +53,15 @@ main {
   margin: 20px;
 }
 
+#QR {
+  padding: 100px;
+  text-align: center;
+}
+
+#QR h2 {
+  font-size: 30px;
+}
+
 .breeds-container {
   background: linear-gradient(to bottom right, #FEF4E8, #FCE0BF);
   padding: 20px;
@@ -109,13 +118,14 @@ main {
 }
 
 .cat-container {
-  position: absolute;
+  position: relative;
   bottom: 0; /* Position the cat container at the bottom of the game container */
   left: 0;
   width: 100%; /* To make the cat container stretch to fit the game container */
   height: 300px;
-  background-color: #fff;
   border: 2px solid #000;
+  box-sizing: border-box;
+  background-color: #fff;
   transition: transform 0.5s ease-in-out;
 }
 
@@ -131,15 +141,9 @@ main {
   transform: translate(-50%, -50%);
 }
 
-
-button {
-  margin-top: 20px;
-}
-
 #score {
   font-size: 18px;
   font-weight: bold;
-  margin-top: 20px;
 }
 
 /* CSS for the vibrating effect */
@@ -220,8 +224,8 @@ button {
   /* Reduce the size of all breed icons for smaller screens */
   .breed-card img,
   .adopt-card img {
-    max-width: 60px;
-    max-height: 60px;
+    max-width: 80px;
+    max-height: 80px;
   }
 
   /* Adjust the game container layout for smaller screens */
@@ -229,18 +233,14 @@ button {
     display: flex; /* Use Flexbox for layout control */
     flex-direction: column; /* Arrange elements in a column */
     align-items: center; /* Center the elements horizontally within the game container */
-  }
-
-  /* Adjust the game container p for smaller screens */
-  .game-container p {
-    margin-bottom: 100px; /* Add some bottom margin to create space between p and cat container */
+    width: 80%;
+    height: fit-content;
   }
 
   /* Adjust the cat container size for smaller screens */
   .cat-container {
     width: 100%; /* The cat container will take the full width of the game container */
-    height: 150px; /* Adjust the height of the cat container for smaller screens */
-    margin-top: auto; /* Push the cat container to the bottom of the game container */
+    margin-top: 20px; /* Push the cat container to the bottom of the game container */
   }
 
   /* Adjust the cat image size for smaller screens */
@@ -249,31 +249,18 @@ button {
     height: 50px; /* Reduce the height of the cat image for smaller screens */
   }
 
-  /* Reduce the size of all breed icons for smaller screens */
-  .breed-card img,
-  .adopt-card img {
-    max-width: 80px;
-    max-height: 80px;
-  }
-
   /* Adjust the font size for smaller screens */
   #timer {
-    font-size: 30px; /* Adjust the font size of the timer for smaller screens */
+    font-size: 15px; /* Adjust the font size of the timer for smaller screens */
   }
 
   #score {
     font-size: 14px; /* Adjust the font size of the score for smaller screens */
   }
 
-  /* Adjust the width of the game container for smaller screens */
-  .game-container {
-    width: 80%;
-    height: auto;
-  }
-
   /* Adjust the video container size for smaller screens */
   .video-container iframe {
-    width: 90%; /* Make embedded videos take full width within the video container */
-    height: auto; /* Let the height adjust automatically based on the aspect ratio */
+    width: auto; /* Make embedded videos take full width within the video container */
+    height: 90%; /* Let the height adjust automatically based on the aspect ratio */
   }
 }

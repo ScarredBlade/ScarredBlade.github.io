@@ -17,15 +17,20 @@
     <h1>Welcome to Cat Lovers!</h1>
     <nav>
       <ul id="menu" class="closed">
-        <li><a href="#" onclick="showPage('breeds')">Cat Breeds</a></li>
-        <li><a href="#" onclick="showPage('adoption')">Adoption and Rescue</a></li>
-        <li><a href="#" onclick="showPage('fun')">Fun and Entertainment</a></li>
-        <li><a href="#" onclick="showPage('game')">Cat Game</a></li>
+        <li><a href="#">Cat Breeds</a></li>
+        <li><a href="#">Adoption and Rescue</a></li>
+        <li><a href="#">Fun and Entertainment</a></li>
+        <li><a href="#">Cat Game</a></li>
       </ul>
     </nav>
   </header>
 
   <main id="main-content">
+    <div id="QR">
+      <h2>Website Link</h2>
+      <img src="images/QR.png" alt="QR Code">
+    </div>
+    
     <div id="breeds" style="display: none;">
       <h2>Cat Breeds</h2>
       <div class="breeds-container">
@@ -106,16 +111,16 @@
           <h3>Videos</h3>
           <div class="video-container">
           <p>Watch adorable and funny cat videos.</p>
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/LilNg6-C10o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/SB-qEYVdvXA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/xS9M6zQI3AU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/LilNg6-C10o" title="YouTube video player" style="border:0;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/SB-qEYVdvXA" title="YouTube video player" style="border:0;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/xS9M6zQI3AU" title="YouTube video player" style="border:0;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
           </div>
         </div>
     </div>
 
     <div id="game" class="game-container" style="display: none;">
       <h2>Mini Cat Game</h2>
-      <button onclick="startGame()">Start Game</button>
+      <button id="playButton">Start Game</button>
       <p id="timer">Time: 60</p>
       <p id="score">Score: 0</p>
 
