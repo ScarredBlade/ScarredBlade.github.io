@@ -1,68 +1,136 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #F5F1EB;
-    color: #333;
-    margin: 0;
-    padding: 0;
-  }
+  font-family: Arial, sans-serif;
+  background-color: #F5F1EB;
+  color: #333;
+  font-size:20px;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #D2A48C;
+  padding: 20px;
+}
+
+h1 {
+  color: #fff;
+  margin: 0;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+nav li {
+  margin: 10px;
+}
+
+nav ul li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+/* Style for hover effect on topics */
+nav ul li:hover a {
+  color: maroon;
+}
+
+/* Style for active topic */
+nav ul li.active a {
+  background-color: red;
+  color: #fff;
+}
   
-  header {
-    background-color: #D2A48C;
-    padding: 20px;
-  }
-  
-  h1 {
-    color: #fff;
-    margin: 0;
-  }
-  
-  nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-  }
-  
-  nav ul li {
-    display: inline-block;
-    margin-right: 10px;
-  }
-  
-  nav ul li a {
-    color: #fff;
-    text-decoration: none;
-  }
-  
-  main {
-    margin: 20px;
-  }
-  
-  /* Additional styling specific to each topic can be added below */
-  /* CSS styles for the website */
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+main {
+  margin: 20px;
+}
+
+.breeds-container {
+  background: linear-gradient(to bottom right, #FEF4E8, #FCE0BF);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* Add styles to initially hide elements under adopt-card & breed-card */
+.breed-card h3,
+.breed-card p,
+.adopt-card p,
+.adopt-card ul {
+  display: none;
+}
+
+/* Reduce the size of all breed & adopt icons to a maximum of 100px in width and height */
+.breed-card img,
+.adopt-card img {
+  max-width: 100px;
+  max-height: 100px;
+  margin: 10px;
+}
+
+/* Images to be centered within their containers */
+.breed-card,
+.adopt-card {
+  text-align: center;
+}
+
+.adoption-container {
+  background: linear-gradient(to bottom right, #FDEEE8, #FBD2C8);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.fun-container {
+  background: linear-gradient(to bottom right, #FDF8E8, #FCEBBF);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.video-container {
+  text-align: center;
+  margin: 50px auto; /* Center the video container */
+  width: 100%;
+}
 
 .game-container {
   text-align: center;
-  margin-top: 50px;
-  width: 400px;
-  height: 400px;
-  background-color: #fff;
-  border: 2px solid #000;
+  margin: 50px auto 0; /* Adjust the top margin to move the game container down */
+  width: 500px;
+  height: 500px;
   position: relative;
-  margin: 0 auto;
   overflow: hidden;
 }
 
 .cat-container {
   position: absolute;
-  top: 0;
+  bottom: 0; /* Position the cat container at the bottom of the game container */
   left: 0;
+  width: 100%; /* To make the cat container stretch to fit the game container */
+  height: 300px;
+  background-color: #fff;
+  border: 2px solid #000;
   transition: transform 0.5s ease-in-out;
 }
 
 #cat {
   position: absolute;
-  top: 0;
+  bottom: 0; /* Position the cat image at the bottom of the cat container */
   left: 0;
+  width: 80px;
+  height: 80px;
+  /* Center the image within the cat container */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
+
 
 button {
   margin-top: 20px;
@@ -72,4 +140,140 @@ button {
   font-size: 18px;
   font-weight: bold;
   margin-top: 20px;
+}
+
+/* CSS for the vibrating effect */
+@keyframes tilt {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  25% {
+    transform: rotateZ(-5deg);
+  }
+  50% {
+    transform: rotateZ(5deg);
+  }
+  75% {
+    transform: rotateZ(-5deg);
+  }
+  100% {
+    transform: rotateZ(0deg);
+  }
+}
+
+/* Apply the animation to the "vibrate" class */
+  #main-content > div:not(#game) img.vibrate:hover {
+  animation: tilt 0.8s ease-in-out infinite;
+}
+
+/* Responsive styles for screens <= 800px */
+@media (max-width: 800px) {
+  /* Apply styles for smaller screens */
+  body {
+    font-size:3vw;
+  }
+
+  #main-content {
+    margin-top: 200px;
+  }
+  
+  #menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #D2A48C;
+    padding: 10px;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+  }
+
+  #menu.open {
+    display: flex;
+  }
+
+  #menu li {
+    margin: 5px;
+  }
+
+  #menu-icon {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+  }
+
+  .breed-card h3,
+  .breed-card p {
+    display: none; /* Show h3 and p on smaller screens */
+  }
+
+  .adopt-card p,
+  .adopt-card ul {
+    display: none; /* Show p and ul on smaller screens */
+  }
+
+  /* Reduce the size of all breed icons for smaller screens */
+  .breed-card img,
+  .adopt-card img {
+    max-width: 60px;
+    max-height: 60px;
+  }
+
+  /* Adjust the game container layout for smaller screens */
+  .game-container {
+    display: flex; /* Use Flexbox for layout control */
+    flex-direction: column; /* Arrange elements in a column */
+    align-items: center; /* Center the elements horizontally within the game container */
+  }
+
+  /* Adjust the game container p for smaller screens */
+  .game-container p {
+    margin-bottom: 100px; /* Add some bottom margin to create space between p and cat container */
+  }
+
+  /* Adjust the cat container size for smaller screens */
+  .cat-container {
+    width: 100%; /* The cat container will take the full width of the game container */
+    height: 150px; /* Adjust the height of the cat container for smaller screens */
+    margin-top: auto; /* Push the cat container to the bottom of the game container */
+  }
+
+  /* Adjust the cat image size for smaller screens */
+  #cat {
+    width: 50px; /* Reduce the width of the cat image for smaller screens */
+    height: 50px; /* Reduce the height of the cat image for smaller screens */
+  }
+
+  /* Reduce the size of all breed icons for smaller screens */
+  .breed-card img,
+  .adopt-card img {
+    max-width: 80px;
+    max-height: 80px;
+  }
+
+  /* Adjust the font size for smaller screens */
+  #timer {
+    font-size: 30px; /* Adjust the font size of the timer for smaller screens */
+  }
+
+  #score {
+    font-size: 14px; /* Adjust the font size of the score for smaller screens */
+  }
+
+  /* Adjust the width of the game container for smaller screens */
+  .game-container {
+    width: 80%;
+    height: auto;
+  }
+
+  /* Adjust the video container size for smaller screens */
+  .video-container iframe {
+    width: 90%; /* Make embedded videos take full width within the video container */
+    height: auto; /* Let the height adjust automatically based on the aspect ratio */
+  }
 }

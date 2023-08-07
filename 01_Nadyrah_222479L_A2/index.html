@@ -2,37 +2,127 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="180x180" href="icon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="icon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="icon/favicon-16x16.png">
+  <link rel="manifest" href="icon/site.webmanifest">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cat Lovers Website</title>
   <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
 </head>
+
 <body>
   <header>
     <h1>Welcome to Cat Lovers!</h1>
     <nav>
       <ul id="menu" class="closed">
-        <li><a href="#" onclick="loadPage('breeds')">Cat Breeds</a></li>
-        <li><a href="#" onclick="loadPage('care')">Cat Care and Health</a></li>
-        <li><a href="#" onclick="loadPage('adoption')">Adoption and Rescue</a></li>
-        <li><a href="#" onclick="loadPage('behavior')">Behaviour and Training</a></li>
-        <li><a href="#" onclick="loadPage('products')">Cat Products and Reviews</a></li>
-        <li><a href="#" onclick="loadPage('fun')">Fun and Entertainment</a></li>
-        <li><a href="#" onclick="loadPage('community')">Community and Forums</a></li>
-        <li><a href="#" onclick="loadPage('resources')">Cat-related Resources</a></li>
+        <li><a href="#" onclick="showPage('breeds')">Cat Breeds</a></li>
+        <li><a href="#" onclick="showPage('adoption')">Adoption and Rescue</a></li>
+        <li><a href="#" onclick="showPage('fun')">Fun and Entertainment</a></li>
+        <li><a href="#" onclick="showPage('game')">Cat Game</a></li>
       </ul>
     </nav>
   </header>
+
   <main id="main-content">
-    <div class="game-container">
-      <h2>Mini Cat Game</h2>
-      <div class="cat-container">
-        <img src="images/cat.png" alt="Cat" id="cat">
+    <div id="breeds" style="display: none;">
+      <h2>Cat Breeds</h2>
+      <div class="breeds-container">
+        <!-- Persian Cat -->
+        <div class="breed-card">
+          <img src="images/persianIcon.png" alt="Persian Cat">
+          <h3>Persian</h3>
+          <p>The Persian cat is one of the most popular cat breeds. Known for its long and luxurious coat, the Persian is a calm and gentle companion. They have a sweet temperament and enjoy a peaceful and quiet environment. Persians require regular grooming to keep their coat healthy and free from matting.
+          Origins: The Persian cat has ancient roots and is believed to have originated in Persia (modern-day Iran). It was brought to Europe by traders and gained popularity as a pet in the 19th century.
+          Appearance: Persian cats have a round face, short nose, and large, expressive eyes. They come in a wide variety of colors and coat patterns, including solid, bi-color, tabby, and more.
+          Temperament: Persians are affectionate and enjoy being pampered. They are not highly active cats and prefer a calm and relaxed environment. Due to their long coat, they are not typically fond of high-energy play.</p>
+        </div>
+
+        <!-- Maine Coon Cat -->
+        <div class="breed-card">
+          <img src="images/maineCoonIcon.png" alt="Maine Coon Cat">
+          <h3>Maine Coon</h3>
+          <p>The Maine Coon is another beloved cat breed. It is one of the largest domestic cat breeds and is known for its striking appearance and friendly nature. Maine Coons are intelligent and social cats that get along well with children and other pets. They have a thick, shaggy coat that requires regular brushing.
+          Origins: The Maine Coon is native to the United States and is believed to have originated in the state of Maine. It is often referred to as "America's Cat" and has a rich history in the region.
+          Appearance: Maine Coons are large and muscular cats with tufted ears and bushy tails. They have a water-resistant double coat that helps them stay warm in cold weather.
+          Temperament: Maine Coons are known for their friendly and sociable nature. They are often referred to as "gentle giants" due to their affectionate demeanor and large size. They are highly intelligent and enjoy interactive play.</p>
+        </div>
+
+        <!-- Bengal Cat -->
+        <div class="breed-card">
+          <img src="images/bengalIcon.png" alt="Bengal Cat">
+          <h3>Bengal</h3>
+          <p>The Bengal cat is a beautiful and energetic breed that captures attention with its distinctive coat pattern reminiscent of a leopard. Bengals are highly active and playful cats that enjoy interactive toys and activities. They are known for their intelligence and curiosity. Bengal cats require mental and physical stimulation to thrive.
+          Origins: The Bengal breed was developed by crossing domestic cats with Asian leopard cats. This hybridization resulted in the unique coat pattern and striking appearance seen in today's Bengal cats.
+          Appearance: Bengal cats have a sleek and muscular body with a short, dense coat. Their coat features spots, rosettes, or marbling, resembling the appearance of wild big cats.
+          Temperament: Bengals are energetic and active cats that enjoy climbing, jumping, and playing. They are curious and may explore every corner of their environment. Providing them with interactive toys and puzzles is essential to keep them mentally stimulated.</p>
+        </div>
+
       </div>
+    </div>
+
+    <div id="adoption" style="display: none;">
+      <h2>Adoption and Rescue</h2>
+      <div class="adoption-container">
+        <p>Information about local shelters, rescue organizations, and adoption events:</p>
+
+        <div class="adopt-card clickable-card">
+          <img src="images/rescue.png" alt="Icon" class="icon">
+          <h3>Why Adoption and Rescue are Important</h3>
+          <p>Adopting a cat from a shelter or rescue organization is a compassionate and responsible choice. Here are some reasons why adoption and rescue are important:</p>
+          <ul>
+            <li><strong>Saving Lives:</strong> By adopting a cat, you provide a loving home to an animal in need. Many cats in shelters are looking for a second chance at a happy life.</li>
+            <li><strong>Reducing Overpopulation:</strong> Adoption helps to address the issue of cat overpopulation. By choosing adoption, you actively contribute to reducing the number of stray and homeless cats.</li>
+            <li><strong>Supporting Ethical Practices:</strong> Reputable shelters and rescue organizations prioritize the welfare of animals. When you adopt, you support organizations that work to ensure the well-being of cats and promote responsible pet ownership.</li>
+            <li><strong>Health and Behavior:</strong> Cats available for adoption are often spayed or neutered, vaccinated, and given necessary medical care. Additionally, shelters and rescues provide valuable insights into a cat's behavior and temperament, helping you find a cat that fits your lifestyle.</li>
+          </ul>
+        </div>
+
+        <div class="adopt-card clickable-card">
+          <img src="images/adopt.png" alt="Icon" class="icon">
+          <h3>Adopt, Don't Shop</h3>
+          <p>The motto "adopt, don't shop" encourages people to consider adoption as the preferred option when bringing a new cat into their lives. By adopting, you not only provide a loving home to a cat but also help create a more compassionate society that values the well-being of all animals.</p>
+          <p>Remember, there are many wonderful cats waiting to be adopted in shelters and rescue organizations. Give them a chance and experience the joy of saving a life!</p>
+        </div>
+
+        <div class="adopt-card clickable-card">
+          <img src="images/sg.png" alt="Icon" class="icon">
+          <h3>Adopting in Singapore</h3>
+          <p>Singapore has several reputable animal shelters and rescue organizations dedicated to cat adoption. Here are a few notable ones:</p>
+          <ul>
+            <li><strong>Society for the Prevention of Cruelty to Animals (SPCA)</strong>: The SPCA in Singapore actively promotes the adoption of cats and other animals. Visit their website to view available cats and learn more about the adoption process.</li>
+            <li><strong>Cat Welfare Society (CWS)</strong>: CWS focuses on improving the welfare of community cats in Singapore. They facilitate adoptions and offer trap-neuter-release programs.</li>
+            <li><strong>Love Kuching Project</strong>: Love Kuching Project is a cat rescue group that provides shelter, veterinary care, and adoption services. They specialize in rehabilitating sick and injured cats.</li>
+          </ul>
+          <p>These organizations hold regular adoption drives and events where you can meet cats looking for their forever homes. Adopting a cat not only gives them a second chance at a happy life but also helps to reduce the number of stray cats in Singapore.</p>
+        </div>
+      </div>
+    </div>
+
+    <div id="fun" style="display: none;">
+      <h2>Fun and Entertainment</h2>       
+        <div class="fun-card">
+          <h3>Videos</h3>
+          <div class="video-container">
+          <p>Watch adorable and funny cat videos.</p>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/LilNg6-C10o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/SB-qEYVdvXA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/xS9M6zQI3AU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          </div>
+        </div>
+    </div>
+
+    <div id="game" class="game-container" style="display: none;">
+      <h2>Mini Cat Game</h2>
       <button onclick="startGame()">Start Game</button>
       <p id="timer">Time: 60</p>
       <p id="score">Score: 0</p>
+
+      <div class="cat-container">
+        <img src="images/nyanCat.png" alt="Cat" id="cat">
+      </div>
     </div>
   </main>
-  <script src="script.js"></script>
 </body>
 </html>
