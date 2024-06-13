@@ -1,0 +1,53 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="200dp"
+    android:layout_height="wrap_content"
+    android:padding="16dp"
+    android:layout_gravity="center">
+
+    <TextView
+        android:id="@+id/textViewMusic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Music"
+        android:textSize="16sp"
+        android:textColor="#ffffff"
+        android:gravity="center"/>
+
+    <SeekBar
+        android:id="@+id/seekBarMusic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="100"
+        android:layout_marginTop="16dp"
+        android:layout_below="@id/textViewMusic"
+        android:progressTint="#9BD791"/>
+
+    <TextView
+        android:id="@+id/textViewSFX"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SFX"
+        android:textSize="16sp"
+        android:textColor="#ffffff"
+        android:gravity="center"
+        android:layout_below="@id/seekBarMusic"
+        android:layout_marginTop="16dp"/>
+
+    <SeekBar
+        android:id="@+id/seekBarSFX"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="100"
+        android:layout_below="@id/textViewSFX"
+        android:layout_marginTop="16dp"
+        android:progressTint="#9BD791"/>
+
+    <Button
+        android:id="@+id/btnClose"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/seekBarSFX"
+        android:layout_marginTop="16dp"
+        android:text="Close" />
+</RelativeLayout>

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.sdm.mgp_assignment">
+
+    <uses-permission android:name="android.permission.VIBRATE" />
+<!--    Facebook Developer SDK-->
+<!--    <uses-permission android:name="android.permission.INTERNET" />-->
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/recycle_bin"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/recycle_bin"
+        android:supportsRtl="true"
+        tools:targetApi="31">
+
+<!--        Facebook Developer SDK-->
+<!--        <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="1500369053871692"/>-->
+<!--        <meta-data android:name="com.facebook.sdk.ClientToken" android:value="d9b3d8c88c18f98cdc23f032fc3a56b5"/>-->
+
+<!--        <activity android:name="com.facebook.FacebookActivity"-->
+<!--            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"-->
+<!--            android:label="MGP 2023"/>-->
+<!--        -->
+<!--        <provider-->
+<!--            android:authorities="com.facebook.app.FacebookContentProvider1106878607141723"-->
+<!--            android:name="com.facebook.FacebookContentProvider"-->
+<!--            android:exported="true"/>-->
+<!--        -->
+<!--        <activity-->
+<!--            android:name="com.facebook.CustomTabActivity"-->
+<!--            android:exported="true">-->
+<!--            -->
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.VIEW"/>-->
+<!--                <category android:name="android.intent.category.DEFAULT"/>-->
+<!--                <category android:name="android.intent.category.BROWSABLE"/>-->
+<!--                <data android:scheme="fb1106878607141723"/>-->
+<!--            </intent-filter>-->
+<!--        </activity>-->
+
+        <activity
+            android:name=".SplashPage"
+            android:screenOrientation="landscape"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".LoadingScreen"
+            android:screenOrientation="landscape"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".MainMenu"
+            android:screenOrientation="landscape"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".GamePage"
+            android:screenOrientation="landscape"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".GameOverPage"
+            android:screenOrientation="landscape"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".LeaderboardActivity"
+            android:screenOrientation="landscape"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+    </application>
+</manifest>
