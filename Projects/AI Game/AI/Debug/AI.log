@@ -1,0 +1,3 @@
+﻿  SceneMaze.cpp
+D:\Y2 SEM2 WORKS\AI Game Programming\DX1220_AI_Week 12_Solution\AI\Source\SceneMaze.cpp(47,18): warning C4244: '=': conversion from 'time_t' to 'unsigned int', possible loss of data
+  AI.vcxproj -> D:\Y2 SEM2 WORKS\AI Game Programming\DX1220_AI_Week 12_Solution\Debug\AI.exe

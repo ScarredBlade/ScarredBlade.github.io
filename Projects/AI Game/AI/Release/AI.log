@@ -1,0 +1,38 @@
+﻿  Application.cpp
+  Camera.cpp
+  GameObject.cpp
+  Graph.cpp
+  LoadOBJ.cpp
+  LoadTGA.cpp
+  main.cpp
+  Maze.cpp
+  Mesh.cpp
+  MeshBuilder.cpp
+  PostOffice.cpp
+  SceneBase.cpp
+D:\Y2 SEM2 WORKS\AI Game Programming\DX1220_AI_Week 12_Solution\AI\Source\SceneBase.cpp(156,84): warning C4305: 'argument': truncation from 'double' to 'float'
+D:\Y2 SEM2 WORKS\AI Game Programming\DX1220_AI_Week 12_Solution\AI\Source\SceneBase.cpp(160,83): warning C4305: 'argument': truncation from 'double' to 'float'
+D:\Y2 SEM2 WORKS\AI Game Programming\DX1220_AI_Week 12_Solution\AI\Source\SceneBase.cpp(165,74): warning C4305: 'argument': truncation from 'double' to 'float'
+  SceneData.cpp
+  SceneGraph.cpp
+  SceneHex.cpp
+  SceneKnight.cpp
+  SceneMaze.cpp
+D:\Y2 SEM2 WORKS\AI Game Programming\DX1220_AI_Week 12_Solution\AI\Source\SceneMaze.cpp(47,18): warning C4244: '=': conversion from 'time_t' to 'unsigned int', possible loss of data
+  SceneMovement.cpp
+  SceneQueen.cpp
+  SceneTicTacToe.cpp
+  Compiling...
+  SceneTurn.cpp
+  shader.cpp
+  State.cpp
+  StateMachine.cpp
+  StatesFish.cpp
+  StatesFishFood.cpp
+  StatesShark.cpp
+  Utility.cpp
+  Generating code
+  Previous IPDB not found, fall back to full compilation.
+  All 2095 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Finished generating code
+  AI.vcxproj -> D:\Y2 SEM2 WORKS\AI Game Programming\DX1220_AI_Week 12_Solution\Release\AI.exe
